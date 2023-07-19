@@ -1,13 +1,125 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* body {
+  background-color: #444;
+  color: white;
+  margin: 20px;
+  font: 32px "Century Gothic", Futura, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.board-row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.square {
+  background-color: #444;
+  color: white;
+  border: 1px solid #999;
+  padding: 0;
+  font-size: 84px;
+  text-align:center;
+  width: 100px;
+  height: 100px;
+}
+
+.square:focus{
+  outline: none;
+  background-color: #222;;
+}
+
+.status{
+  margin: 20px;
+  font-size: 24px;
+} */
+
+/* index.css */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #000000; /* Light gray background color */
+}
+
+.game {
+  position: relative;
+  padding: 60px;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  text-align: center;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.board {
+  background-color: #e0e0e0;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  animation: lightingEffect 3s infinite;
+}
+
+@keyframes lightingEffect {
+  0%, 100% {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00ccff, 0 0 70px #00ccff, 0 0 80px #00ccff, 0 0 100px #00ccff;
+  }
+  50% {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #00ccff, 0 0 35px #00ccff, 0 0 40px #00ccff, 0 0 50px #00ccff;
+  }
+}
+
+
+.board-row {
+  display: flex;
+  justify-content: center;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffe81c; /* Bright yellow background color */
+  border: 2px solid rgb(0, 0, 0);
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+/* Add hover effect */
+.square:hover {
+  background-color: #ff0000; /* Lighter shade of yellow on hover */
+}
+
+.Status {
+  margin: 10px 0;
+  font-size: 24px;
+  text-align: center;
+  color: #333; /* Dark gray text color */
+}
+
+.reset-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50; /* Bright green background color */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+  background-color: #45a049; /* Slightly darker shade of green on hover */
 }
